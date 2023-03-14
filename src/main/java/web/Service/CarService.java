@@ -1,4 +1,4 @@
-package web.Dao;
+package web.Service;
 
 import org.springframework.stereotype.Component;
 import web.models.Car;
@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Component
-public class CarDao {
+public class CarService implements CarInterface {
     private final List<Car> cars;
 
     {
