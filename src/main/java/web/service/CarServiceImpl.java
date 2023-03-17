@@ -1,4 +1,4 @@
-package web.Service;
+package web.service;
 
 import org.springframework.stereotype.Component;
 import web.models.Car;
@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Component
-public class CarService implements CarInterface {
+public class CarServiceImpl implements CarService {
     private final List<Car> cars;
 
     {

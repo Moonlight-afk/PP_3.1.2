@@ -1,4 +1,4 @@
-package web.Service;
+package web.service;
 
 import web.models.Car;
 
@@ -6,6 +6,6 @@ import web.models.Car;
 import java.util.List;
 
 
-public interface CarInterface {
+public interface CarService {
     List<Car> show(int count);
 }
