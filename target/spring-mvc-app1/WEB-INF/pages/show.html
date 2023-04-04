@@ -7,9 +7,6 @@
 <body>
 <p th:text="${person.getId() + '. ' +
      person.getFirstName() + ' ' + person.getLastName() + ' ' + person.getAge()}">VALUE</p>
-<!--<p th:text="${person.getFirstName()}">VALUE</p>
-<p th:text="${person.getLastName()}">VALUE</p>
-<p th:text="${person.getAge()}">VALUE</p>-->
 <form th:action="@{/users/{id}/edit(id=${person.getId()})}">
     <input type="submit" value="Edit">
 </form>
