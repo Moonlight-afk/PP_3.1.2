@@ -14,5 +14,5 @@ public interface UserRepository {
 
     Users readUser(int id);
 
-    Users deleteUser(int id);
+    void deleteUser(int id);
 }

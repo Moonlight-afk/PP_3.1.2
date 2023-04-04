@@ -21,13 +21,11 @@ public class UserRepositoryImpl implements UserRepository {
     @Override
     public void createUser(Users person) {
         entityManager.persist(person);
-        entityManager.flush();
     }
 
     @Override
     public void updateUser(Users user) {
         entityManager.merge(user);
-        entityManager.flush();
     }
 
     @Override
@@ -36,10 +34,8 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public Users deleteUser(int id) {
+    public void deleteUser(int id) {
         Users user = readUser(id);
         entityManager.remove(user);
-        entityManager.flush();
-        return null;
     }
 }

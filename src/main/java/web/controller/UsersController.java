@@ -14,11 +14,6 @@ public class UsersController {
     public UsersController(UsersService userService) {
         this.usersService = userService;
     }
-    /*private final UsersServiceImpl usersService;
-    @Autowired
-    public UsersController(UsersServiceImpl usersService) {
-        this.usersService = usersService;
-    }*/
 
     @GetMapping()
     public String show(Model User) {
@@ -38,7 +33,7 @@ public class UsersController {
     }
 
     @PostMapping()
-    public String create(@ModelAttribute("person")Users person) {
+    public String create(@ModelAttribute("person") Users person) {
         usersService.save(person);
         return "redirect:/users";
     }

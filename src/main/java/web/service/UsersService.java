@@ -10,10 +10,11 @@ public interface UsersService {
     List<Users> show();
 
     void save(Users person);
+
     Users showid(int id);
 
     void update(int id, Users userUpdate);
 
-    Users delete(int id);
+    void delete(int id);
 
 }
