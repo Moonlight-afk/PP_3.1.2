@@ -17,9 +17,12 @@ public class Users {
     @Size(min = 2, max = 30, message = "Name should be between 2 to 30")
     private String firstName;
 
+    @NotEmpty(message = "LastName should not be empty")
+    @Size(min = 2, max = 100, message = "Name should be between 2 to 100")
     @Column(name = "last_name")
     private String lastName;
 
+    @NotEmpty(message = "Not null")
     private int age;
 
     public Users(int id, String firstName, String lastName, int age) {

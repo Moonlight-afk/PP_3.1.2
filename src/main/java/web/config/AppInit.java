@@ -1,11 +1,15 @@
 package web.config;
 
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.filter.HiddenHttpMethodFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+import javax.servlet.Filter;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 
+
+@Configuration
 public class AppInit extends AbstractAnnotationConfigDispatcherServletInitializer {
 
     // Метод, указывающий на класс конфигурации
@@ -30,14 +34,13 @@ public class AppInit extends AbstractAnnotationConfigDispatcherServletInitialize
         return new String[]{"/"};
     }
 
-    @Override
-    public void onStartup(ServletContext servletContext) throws ServletException {
-        super.onStartup(servletContext);
+    public void onStartup(ServletContext servletContext) throws ServletException, jakarta.servlet.ServletException {
+        super.onStartup((jakarta.servlet.ServletContext) servletContext);
         registerHiddenFieldFilter(servletContext);
     }
 
     private void registerHiddenFieldFilter(ServletContext aContext) {
         aContext.addFilter("hiddenHttpMethodFilter",
-                new HiddenHttpMethodFilter()).addMappingForUrlPatterns(null, true, "/*");
+                (Filter) new HiddenHttpMethodFilter()).addMappingForUrlPatterns(null, true, "/*");
     }
 }

@@ -33,10 +33,6 @@ public class UsersServiceImpl implements UsersService {
     }
 
     public void delete(int id) {
-        try {
-            userRepository.deleteUser(id);
-        } catch (NullPointerException e) {
-            e.printStackTrace();
-        }
+        userRepository.deleteUser(id);
     }
 }

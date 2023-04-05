@@ -1,4 +1,9 @@
+web\service\UsersService.class
 web\models\Users.class
-web\controller\CarsController.class
-web\service\CarService.class
-web\models\Car.class
+web\repository\UserRepository.class
+web\service\UsersServiceImpl.class
+web\config\AppConfig.class
+web\config\AppInit.class
+web\config\WebConfig.class
+web\repository\UserRepositoryImpl.class
+web\controller\UsersController.class
