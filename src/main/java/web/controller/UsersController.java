@@ -1,13 +1,12 @@
 package web.controller;
 
+import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import web.models.Users;
 import web.service.UsersService;
-
-import javax.validation.Valid;
 
 @Controller
 @RequestMapping("/users")
